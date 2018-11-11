@@ -27,6 +27,8 @@ ENV TZ Asia/Shanghai
 # 镜像暴露3306端口； 
 EXPOSE 3306 
 
+#挂载匿名卷
+VOLUME ["/var/lib/mysql"]
 
 # 容器启动后执行以下命令，启动mysql； 
 CMD ["/usr/bin/mysqld_safe"]
